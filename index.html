@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #background {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        .floating-image {
+            height: 80px;
+            width: 80px;
+            object-fit: cover;
+        }
+
+        #floating-image1 {
+            animation-name: fromLeft;
+            animation-duration: 1.5s;
+            animation-timing-function: linear;
+            position: absolute;
+            top: 120px;
+            left: 10%;
+        }
+
+        #floating-image2 {
+            animation-name: fromTop;
+            animation-duration: 1.5s;
+            animation-timing-function: linear;
+            position: absolute;
+            position: absolute;
+            top: 60px;
+            left: 40%;
+        }
+
+        #floating-image3 {
+            animation-name: fromRight;
+            animation-duration: 1.5s;
+            animation-timing-function: linear;
+            position: absolute;
+            position: absolute;
+            top: 120px;
+            left: 70%;
+        }
+
+        svg {
+            font-family: "Modak", serif;
+            font-weight: 400;
+            font-style: normal;
+            position: absolute;
+            top: 27%;
+            fill: rgb(255, 112, 136);
+            font-size: 1.55rem;
+            z-index: 10;
+        }
+
+
+        p {
+            border-radius: 10px;
+            padding: 10px;
+            font-family: "Playwrite VN", serif;
+            font-optical-sizing: auto;
+            font-size: 0.9rem;
+            font-weight: 600;
+            font-style: normal;
+            position: absolute;
+            bottom: 120px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            text-shadow: offset-x offset-y blur-radius color;
+            left: 5%;
+        }
+
+        @keyframes fromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fromRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    
+        @keyframes fromTop {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    
+    </style>
+</head>
+
+<body>
+    <img id="background" src="p1.jpg">
+    <img id="floating-image1" class="floating-image" src="g2.jpg">
+    <img id="floating-image2" class="floating-image" src="g1.jpg">
+    <img id="floating-image3" class="floating-image" src="g3.jpg">
+    <svg viewBox="0 0 500 500">
+        <path id="curve" fill="transparent" d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />
+        <text width="500">
+            <textPath xlink:href="#curve" startOffset="50%" text-anchor="middle">
+                Happy 20th birthday! My little lady💕
+            </textPath>
+        </text>
+    </svg>
+
+    <p style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
+          -1px 1px 0 #000, 1px 1px 0 #000; color: rgb(126, 182, 237);">
+        May your special day be as beautiful <br> and extraordinary as you are to me.💕
+    </p>
+</body>
+</html>
